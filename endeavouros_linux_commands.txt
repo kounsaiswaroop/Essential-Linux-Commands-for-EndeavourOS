@@ -1,0 +1,118 @@
+
+=============================================
+ Essential Linux Commands for EndeavourOS
+=============================================
+
+A comprehensive guide to mastering the Konsole terminal in EndeavourOS Linux.
+
+---------------------------------------------
+ 1. System Information Commands
+---------------------------------------------
+- **`uname -r`**: Displays the kernel version.
+- **`neofetch`**: Displays system info in a stylized layout.
+  Install: `sudo pacman -S neofetch`.
+- **`lsb_release -a`**: Shows distribution details.
+- **`hostnamectl`**: Check or set the system hostname.
+
+---------------------------------------------
+ 2. File and Directory Management
+---------------------------------------------
+- **`ls`**: List directory contents.
+  - `ls -l`: Detailed list with permissions.
+  - `ls -a`: Includes hidden files.
+
+- **`cd [path]`**: Change directory.
+  - Examples: `cd /home/user`, `cd ..`, `cd ~`.
+
+- **`pwd`**: Show current directory.
+
+- **File Manipulation**:
+  - `touch [file]`: Create an empty file.
+  - `cp [source] [destination]`: Copy files/directories.
+  - `mv [source] [destination]`: Move or rename files.
+  - `rm [file]`: Delete files or directories.
+  - `mkdir [directory]`: Create a directory.
+
+---------------------------------------------
+ 3. Package Management
+---------------------------------------------
+**Using pacman**:
+- Update system: `sudo pacman -Syu`.
+- Install package: `sudo pacman -S [package_name]`.
+- Search package: `sudo pacman -Ss [keyword]`.
+- Remove package: `sudo pacman -R [package_name]`.
+- Clean cache: `sudo pacman -Sc`.
+
+**Using yay (AUR)**:
+- Install from AUR: `yay -S [package_name]`.
+- Update all: `yay -Syu`.
+- Search AUR: `yay -Ss [keyword]`.
+
+---------------------------------------------
+ 4. System Monitoring and Diagnostics
+---------------------------------------------
+- **`top`**: View processes and resource usage.
+- **`htop`**: Install with `sudo pacman -S htop`.
+- **`free -h`**: Show memory usage.
+- **`df -h`**: Check available disk space.
+- **`uptime`**: Display system uptime.
+- **`journalctl -b`**: Logs for current boot.
+- **`dmesg`**: Hardware-related logs.
+- **`ps aux`**: List all processes.
+
+---------------------------------------------
+ 5. Network Management
+---------------------------------------------
+- **`ip addr`**: View network interfaces and IPs.
+- **`ping [host]`**: Check connectivity.
+  Example: `ping google.com`.
+- **`wget [url]`**: Download files.
+  Example: `wget https://example.com/file`.
+- **`curl [url]`**: Transfer data.
+  Example: `curl https://example.com`.
+
+---------------------------------------------
+ 6. User and Permissions
+---------------------------------------------
+- **`whoami`**: Show current username.
+- **`sudo`**: Run commands as root.
+- **`chmod [permissions] [file]`**: Change file permissions.
+  Example: `chmod 755 script.sh`.
+- **`chown [user]:[group] [file]`**: Change ownership.
+  Example: `chown user:user file.txt`.
+- **`passwd`**: Change the user's password.
+
+---------------------------------------------
+ 7. Disk Management
+---------------------------------------------
+- **`lsblk`**: List storage devices.
+- **`fdisk -l`**: Show partition details.
+- **`mount [device] [mount_point]`**: Mount a device.
+  Example: `sudo mount /dev/sdb1 /mnt/usb`.
+- **`umount [mount_point]`**: Unmount a device.
+
+---------------------------------------------
+ 8. System Management
+---------------------------------------------
+- Reboot: `sudo reboot`.
+- Shut down: `sudo shutdown now`.
+- Start service: `sudo systemctl start [service]`.
+- Enable service: `sudo systemctl enable [service]`.
+- Check service status: `sudo systemctl status [service]`.
+
+---------------------------------------------
+ 9. Customization
+---------------------------------------------
+- Edit Bash config: `nano ~/.bashrc`.
+- Add alias: `alias ll='ls -la'`.
+- Reload Bash config: `source ~/.bashrc`.
+
+---------------------------------------------
+ 10. Text Editors
+---------------------------------------------
+- **Nano**: `nano myfile.txt`.
+- **Vim**: Install with `sudo pacman -S vim`.
+  Usage: `vim myfile.txt`.
+
+---------------------------------------------
+This list covers most commonly used commands in EndeavourOS.
